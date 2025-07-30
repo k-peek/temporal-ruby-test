@@ -1,0 +1,67 @@
+<div class="workflow-result <%= @result[:status] == 'failed' ? 'workflow-error' : '' %>">
+  <h2>🎯 <%= @result[:demo] %></h2>
+  <p><%= @result[:description] %></p>
+  
+  <div style="margin: 1rem 0;">
+    <strong>Status:</strong> 
+    <span style="<%= @result[:status] == 'started' ? 'color: green;' : 'color: red;' %>">
+      <%= @result[:status].upcase %>
+    </span>
+  </div>
+  
+  <% if @result[:workflow_id] %>
+    <div style="margin: 1rem 0;">
+      <strong>Workflow ID:</strong> 
+      <code class="monospace"><%= @result[:workflow_id] %></code>
+      <br>
+      <small>
+        <a href="/bobs_game_store/workflow/<%= @result[:workflow_id] %>" target="_blank">Check Status</a> • 
+        <a href="http://localhost:8233/workflows/<%= @result[:workflow_id] %>" target="_blank">View in Temporal UI</a>
+      </small>
+    </div>
+  <% end %>
+  
+  <% if @result[:release_date] %>
+    <div style="margin: 1rem 0;">
+      <strong>Release Date:</strong> <%= Time.parse(@result[:release_date]).strftime("%Y-%m-%d %H:%M:%S") %> 
+      (<%= @result[:release_minutes] %> minutes from now)
+    </div>
+  <% end %>
+  
+  <details style="margin: 1rem 0;">
+    <summary>Order Details</summary>
+    <div class="monospace" style="background: #f5f5f5; padding: 0.5rem; border-radius: 4px;">
+      <strong>Customer:</strong> <%= @result[:order_params]['customer_email'] %><br>
+      <strong>Product:</strong> <%= @result[:order_params]['product'] %><br>
+      <strong>Amount:</strong> $<%= @result[:order_params]['amount'] %>
+    </div>
+  </details>
+  
+  <% if @result[:error] %>
+    <div style="color: red; margin: 1rem 0;">
+      <strong>Error:</strong> <%= @result[:error] %>
+    </div>
+  <% end %>
+</div>
+
+<div style="margin-top: 2rem;">
+  <a href="/">← Back to Demos</a>
+  
+  <% if @result[:workflow_id] %>
+    <span style="margin: 0 1rem;">|</span>
+    <a href="/bobs_game_store/workflow/<%= @result[:workflow_id] %>" onclick="this.target='_blank'">
+      🔄 Check Workflow Status
+    </a>
+  <% end %>
+</div>
+
+<% if @result[:status] == 'started' %>
+  <script>
+    // Auto-refresh to check workflow progress (optional)
+    setTimeout(function() {
+      if (confirm('Workflow is running. Refresh to check status?')) {
+        location.href = '/bobs_game_store/workflow/<%= @result[:workflow_id] %>';
+      }
+    }, 5000);
+  </script>
+<% end %>
