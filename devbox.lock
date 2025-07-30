@@ -1,0 +1,294 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "curl@latest": {
+      "last_modified": "2025-07-24T23:24:55Z",
+      "resolved": "github:NixOS/nixpkgs/0d00f23f023b7215b3f1035adb5247c8ec180dbc#curl",
+      "source": "devbox-search",
+      "version": "8.14.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/5lm01wbwf0na3fkifq0bh3n8dqcshd5j-curl-8.14.1-bin",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/6ksf76rpsgkwn57jfy66xpbkrwdqkv7g-curl-8.14.1-man",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/5dm0fwyhbwwqyn7y1l0cw7aq0fxh4pjb-curl-8.14.1-dev"
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/9a3s2qgn81aa4p1a9kmgichkzlma0flg-curl-8.14.1-devdoc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/h3dxdqsjl9vz4c8v45ipmkw99w6v8c8a-curl-8.14.1"
+            }
+          ],
+          "store_path": "/nix/store/5lm01wbwf0na3fkifq0bh3n8dqcshd5j-curl-8.14.1-bin"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/9j2j5lmnffdw7k9hbkhnbj463jy5fvix-curl-8.14.1-bin",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/ac0hb5xim8ajx5y9dz9cn09w0mghz96d-curl-8.14.1-man",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/4z2m2srh42fgnrp99z9snk0wn3v0hg6j-curl-8.14.1-debug"
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/bp499v3cxdclliy9jzjr4k9lk59j9jbi-curl-8.14.1-dev"
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/6zm76ga31p30950qpzp08xqaa8235ssv-curl-8.14.1-devdoc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/ma4z43kh5z79m0frs4333vgyi948lgrx-curl-8.14.1"
+            }
+          ],
+          "store_path": "/nix/store/9j2j5lmnffdw7k9hbkhnbj463jy5fvix-curl-8.14.1-bin"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/c013jrpj5cagr3jnphf71hl7q6ja6jpx-curl-8.14.1-bin",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/g5cv211jd7jrx6rg948h4j65sawjgg3n-curl-8.14.1-man",
+              "default": true
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/k010qaizvw5v1apxn7xavc3p73q8ngc7-curl-8.14.1"
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/f7yphi05i0h4r05yklvx53z4lzcw3d2x-curl-8.14.1-dev"
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/jzp7s4yxi3bj8v43c2hsz740y4jwd3dn-curl-8.14.1-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/c013jrpj5cagr3jnphf71hl7q6ja6jpx-curl-8.14.1-bin"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/ql85mv4q636pmfrz2zb5xkp4r131niil-curl-8.14.1-bin",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/gv75z1nvxxk44amwp1d9vr9ri4z36n2k-curl-8.14.1-man",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/k1rdyd0hlzx6g997i3a3lpsqkazbbjxw-curl-8.14.1-debug"
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/0xbikmlg7655qqjgavghrqzmc42s96q8-curl-8.14.1-dev"
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/4gb0rskb3h8q0hii0dgy0wskg02rg3fa-curl-8.14.1-devdoc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/qra9dfwfkpz7h6ng3489lsww2sr3gjyd-curl-8.14.1"
+            }
+          ],
+          "store_path": "/nix/store/ql85mv4q636pmfrz2zb5xkp4r131niil-curl-8.14.1-bin"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-07-28T17:09:23Z",
+      "resolved": "github:NixOS/nixpkgs/648f70160c03151bc2121d179291337ad6bc564b?lastModified=1753722563&narHash=sha256-FK8iq76wlacriq3u0kFCehsRYTAqjA9nfprpiSWRWIc%3D"
+    },
+    "ruby_3_4@latest": {
+      "last_modified": "2025-07-17T10:11:59Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/fa0ef8a6bb1651aa26c939aeb51b5f499e86b0ec#ruby_3_4",
+      "source": "devbox-search",
+      "version": "3.4.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0kmigp0a142apvl22wb16vfs1h2sfxqz-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/7r42cwwpzmha5fxixagmmnbq28kwfn6m-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/0kmigp0a142apvl22wb16vfs1h2sfxqz-ruby-3.4.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fp9mxxs2mgf11fb6w60far22c859kdy7-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/mf3lib9bfp2b4m7x9891aakgzzxv5s7f-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/fp9mxxs2mgf11fb6w60far22c859kdy7-ruby-3.4.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3szxcsq7vfsk5lklz1hvnpiqvvd38qlw-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/bpqmgxp2vd6j6220wrh5kzh1m178bwpb-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/3szxcsq7vfsk5lklz1hvnpiqvvd38qlw-ruby-3.4.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2v7pnml25q3d7m7bc9xaz16g3xsbj70l-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/26bgx29z1clw05swbyzp5x901z41npy7-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/2v7pnml25q3d7m7bc9xaz16g3xsbj70l-ruby-3.4.5"
+        }
+      }
+    },
+    "temporal-cli@latest": {
+      "last_modified": "2025-07-24T15:00:16Z",
+      "resolved": "github:NixOS/nixpkgs/b74a30dbc0a72e20df07d43109339f780b439291#temporal-cli",
+      "source": "devbox-search",
+      "version": "1.4.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v1srwf0jz6sd6rcwsfv79hm70yjqa9f3-temporal-cli-1.4.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v1srwf0jz6sd6rcwsfv79hm70yjqa9f3-temporal-cli-1.4.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/vv84xdiy85d7xsfvdklbf4i6xb463diw-temporal-cli-1.4.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/vv84xdiy85d7xsfvdklbf4i6xb463diw-temporal-cli-1.4.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gv5biryndi4g0dyh6pzhp53cxyr8gfm1-temporal-cli-1.4.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gv5biryndi4g0dyh6pzhp53cxyr8gfm1-temporal-cli-1.4.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/p282qyjc0haivdlprjmr61iiqc7fa1kj-temporal-cli-1.4.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/p282qyjc0haivdlprjmr61iiqc7fa1kj-temporal-cli-1.4.1"
+        }
+      }
+    },
+    "temporal@latest": {
+      "last_modified": "2025-07-13T22:45:35Z",
+      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#temporal",
+      "source": "devbox-search",
+      "version": "1.28.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/syi9xy17issh7x92462ai1cgnj76bajj-temporal-1.28.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/syi9xy17issh7x92462ai1cgnj76bajj-temporal-1.28.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mw80jqy3mms8cjx0i620crqqmkcdrhkq-temporal-1.28.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mw80jqy3mms8cjx0i620crqqmkcdrhkq-temporal-1.28.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/c6ikjyhqksn2c0rahxw5bqmcxjsxjxka-temporal-1.28.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/c6ikjyhqksn2c0rahxw5bqmcxjsxjxka-temporal-1.28.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lbqpwrbvva15rfkhlvvn84vdaygs93w7-temporal-1.28.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lbqpwrbvva15rfkhlvvn84vdaygs93w7-temporal-1.28.0"
+        }
+      }
+    }
+  }
+}
