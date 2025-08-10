@@ -3,7 +3,7 @@ require "temporalio/workflow"
 class OrderCancellationWorkflow < Temporalio::Workflow::Definition
   def execute(order_params)
     payment_result = Temporalio::Workflow.execute_activity(
-      PaymentActivity,
+      ProcessPaymentActivity,
       order_params,
       schedule_to_close_timeout: 30
     )

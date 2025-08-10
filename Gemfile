@@ -20,6 +20,3 @@ group :development do
   gem "web-console"
   gem "rubocop", "~> 1.79"
 end
-
-
-

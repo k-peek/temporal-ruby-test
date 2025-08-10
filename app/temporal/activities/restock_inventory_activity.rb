@@ -3,7 +3,7 @@ require "temporalio/activity"
 class RestockInventoryActivity < Temporalio::Activity::Definition
   def execute(inventory_result)
     reservation_id = inventory_result["reservation_id"] || inventory_result[:reservation_id]
-    product = inventory_result["product"] || inventory_result[:product] || "Nintendo Switch 2"
+    product = inventory_result["product"] || inventory_result[:product] || "Premium Product"
 
     puts "📦 Restocking inventory for reservation: #{reservation_id}"
     sleep(rand(1..2))

@@ -11,7 +11,7 @@ Rails.application.configure do
   )
 
   # Task queue for our workflows
-  config.temporal_task_queue = ENV.fetch("TEMPORAL_TASK_QUEUE", "bobs_game_store")
+  config.temporal_task_queue = ENV.fetch("TEMPORAL_TASK_QUEUE", "kevins_store")
 
   # Store connection info for display
   config.temporal_host = temporal_host
