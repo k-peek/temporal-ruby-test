@@ -3,7 +3,9 @@
 A simple demo showcasing Temporal workflow patterns using Ruby on Rails.
 
 1. **Simple Purchase** - Basic sequential workflow: payment → confirmation email
-2. **Cancellation Flow** - Using signals to message into the flow.
+2. **Cancellation Flow** - Using signals to message into the flow. Try sending signals into the flow like this:
+<img width="1616" height="764" alt="Screenshot 2025-08-10 at 7 34 35 PM" src="https://github.com/user-attachments/assets/7c74862e-9aed-48cf-94e0-5d7e6b430ec1" />
+
 
 ## Quick Start via Devbox
 
@@ -36,6 +38,10 @@ A simple demo showcasing Temporal workflow patterns using Ruby on Rails.
 4. **Try the workflows**:
    - Use the carousel interface to navigate between demos
    - Monitor progress in the Temporal UI at http://localhost:8233
+
+## Instructions without devbox
+
+TODO. Install temporal & ruby. Run servers. See scripts/start-services.sh
 
 ## 📚 Learn More
 
