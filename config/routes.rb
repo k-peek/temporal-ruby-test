@@ -6,15 +6,15 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
-  # Bob's Game Store Temporal Demos
-  scope :bobs_game_store do
-    get "/", to: "bobs_game_store#index"
-    post :simple_purchase, to: "bobs_game_store#simple_purchase"
-    post :order_cancellation, to: "bobs_game_store#order_cancellation"
-    post :preorder, to: "bobs_game_store#preorder"
-    get "workflow/:workflow_id", to: "bobs_game_store#workflow_status"
+  # Kevin's Store Temporal Demos
+  scope :kevins_store do
+    get "/", to: "kevins_store#index"
+    post :simple_purchase, to: "kevins_store#simple_purchase"
+    post :order_cancellation, to: "kevins_store#order_cancellation"
+    get "result/:workflow_id", to: "kevins_store#result"
+    get "workflow/:workflow_id", to: "kevins_store#workflow_status"
   end
 
   # Defines the root path route ("/")
-  root "bobs_game_store#index"
+  root "kevins_store#index"
 end

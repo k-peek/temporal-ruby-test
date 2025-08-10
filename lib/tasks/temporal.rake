@@ -1,7 +1,7 @@
 namespace :temporal do
   desc "Start Temporal worker"
   task worker: :environment do
-    puts "🎮 Bob's Game Store - Temporal Worker"
+    puts "📦 Kevin's Store - Temporal Worker"
     puts "======================================"
 
     # Load all our workflow and activity classes

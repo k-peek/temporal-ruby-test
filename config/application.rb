@@ -23,5 +23,9 @@ module TemporalPlayground
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Add temporal folders to autoload paths
+    config.autoload_paths << Rails.root.join("app", "temporal", "workflows")
+    config.autoload_paths << Rails.root.join("app", "temporal", "activities")
   end
 end

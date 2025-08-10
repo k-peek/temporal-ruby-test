@@ -15,31 +15,19 @@ class TemporalWorker
       task_queue: task_queue,
       workflows: [
         SimplePurchaseWorkflow,
-        PaymentRetryWorkflow,
         OrderCancellationWorkflow
       ],
       activities: [
         # Basic activities
         ProcessPaymentActivity,
-        PaymentActivity,
         SendConfirmationEmailActivity,
-
-        # Payment retry activities
-        PrimaryPaymentActivity,
-        SecondaryPaymentActivity,
-        BnplPaymentActivity,
-        PaymentFailureEmailActivity,
 
         # Order cancellation activities
         ReserveInventoryActivity,
         ShipOrderActivity,
         ProcessRefundActivity,
         RestockInventoryActivity,
-        SendCancellationEmailActivity,
-
-        # Inventory activities
-        PrePurchaseInventoryActivity,
-        CheckInventoryActivity
+        SendCancellationEmailActivity
       ]
     )
 

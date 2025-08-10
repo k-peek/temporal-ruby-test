@@ -1,0 +1,131 @@
+<div>
+  <p style="text-align: center; margin-bottom: 2rem;">
+    Welcome to Kevin's Store! We're demonstrating different Temporal workflow patterns with product purchases.
+  </p>
+  
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <% @demos.each_with_index do |demo, index| %>
+        <div class="swiper-slide">
+          <div class="demo-card">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: #1a1a1a;"><%= demo[:name] %></h2>
+            
+            <div style="display: grid; grid-template-columns: 25% 75%; margin: 1.5rem 0;">
+              <div style="padding-right: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">Workflow Diagram</h3>
+                <div class="mermaid-container">
+                  <div class="mermaid">
+                    <%= demo[:mermaid].strip %>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 style="text-align: center; margin-bottom: 1rem;">Ruby Code</h3>
+                <div class="code-tabs-container">
+                  <div class="code-tabs">
+                    <% demo[:code_files].each_with_index do |file, file_index| %>
+                      <button class="code-tab <%= 'active' if file_index == 0 %>" 
+                              onclick="showCodeTab(this, 'code-content-<%= index %>-<%= file_index %>')">
+                        <%= file[:name] %>
+                      </button>
+                    <% end %>
+                  </div>
+                  <div class="code-container">
+                    <% demo[:code_files].each_with_index do |file, file_index| %>
+                      <div id="code-content-<%= index %>-<%= file_index %>" 
+                           class="code-content <%= 'active' if file_index == 0 %>">
+                        <pre><code class="language-ruby"><%= file[:content] %></code></pre>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <form action="<%= demo[:path] %>" method="post" style="max-width: 400px; margin: 2rem auto 0;">
+              <%= token_tag %>
+              
+              
+              <div style="text-align: center;">
+                <button type="submit">Try <%= demo[:name] %></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<script>
+  function showCodeTab(clickedTab, contentId) {
+    // Find the parent tabs container
+    const tabsContainer = clickedTab.closest('.code-tabs-container');
+    
+    // Hide all code content in this container
+    tabsContainer.querySelectorAll('.code-content').forEach(content => {
+      content.classList.remove('active');
+    });
+    
+    // Remove active class from all tabs in this container
+    tabsContainer.querySelectorAll('.code-tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    
+    // Show the selected content and activate the clicked tab
+    document.getElementById(contentId).classList.add('active');
+    clickedTab.classList.add('active');
+    
+    // Re-highlight syntax for the newly shown code
+    setTimeout(() => {
+      if (typeof Prism !== 'undefined') {
+        Prism.highlightAll();
+      }
+    }, 10);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Mermaid
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'default',
+      flowchart: {
+        htmlLabels: true,
+        curve: 'basis'
+      }
+    });
+    
+    // Initialize Prism.js for syntax highlighting
+    if (typeof Prism !== 'undefined') {
+      Prism.highlightAll();
+    }
+
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      on: {
+        slideChange: function () {
+          // Re-highlight syntax when slide changes
+          setTimeout(() => {
+            if (typeof Prism !== 'undefined') {
+              Prism.highlightAll();
+            }
+          }, 100);
+        }
+      }
+    });
+  });
+</script>

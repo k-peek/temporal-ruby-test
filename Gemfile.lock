@@ -323,7 +323,6 @@ DEPENDENCIES
   solid_cache
   sqlite3 (>= 2.1)
   temporalio
-  tzinfo-data
   web-console
 
 BUNDLED WITH
