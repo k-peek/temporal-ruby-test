@@ -92,22 +92,22 @@ GEM
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.31.1)
+    google-protobuf (4.32.0)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-aarch64-linux-gnu)
+    google-protobuf (4.32.0-aarch64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-aarch64-linux-musl)
+    google-protobuf (4.32.0-aarch64-linux-musl)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-arm64-darwin)
+    google-protobuf (4.32.0-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x86_64-linux-gnu)
+    google-protobuf (4.32.0-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x86_64-linux-musl)
+    google-protobuf (4.32.0-x86_64-linux-musl)
       bigdecimal
       rake (>= 13)
     i18n (1.14.7)
@@ -262,22 +262,22 @@ GEM
     sqlite3 (2.7.3-x86_64-linux-gnu)
     sqlite3 (2.7.3-x86_64-linux-musl)
     stringio (3.1.7)
-    temporalio (0.5.0)
+    temporalio (0.6.0)
       google-protobuf (>= 3.25.0)
       logger
-    temporalio (0.5.0-aarch64-linux)
+    temporalio (0.6.0-aarch64-linux)
       google-protobuf (>= 3.25.0)
       logger
-    temporalio (0.5.0-aarch64-linux-musl)
+    temporalio (0.6.0-aarch64-linux-musl)
       google-protobuf (>= 3.25.0)
       logger
-    temporalio (0.5.0-arm64-darwin)
+    temporalio (0.6.0-arm64-darwin)
       google-protobuf (>= 3.25.0)
       logger
-    temporalio (0.5.0-x86_64-linux)
+    temporalio (0.6.0-x86_64-linux)
       google-protobuf (>= 3.25.0)
       logger
-    temporalio (0.5.0-x86_64-linux-musl)
+    temporalio (0.6.0-x86_64-linux-musl)
       google-protobuf (>= 3.25.0)
       logger
     thor (1.4.0)
